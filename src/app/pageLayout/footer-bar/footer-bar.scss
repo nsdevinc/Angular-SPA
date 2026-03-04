@@ -1,0 +1,18 @@
+@import '../../../styles/abstracts/variables';
+
+.footer-bar-class {
+    height: 100px;
+    width: 100%;
+    padding: 2px;
+    padding-left: 20px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    background-color: $charcoal-blue;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    //border: 1px;
+    //border-style: solid;
+    //border-color: black;
+}

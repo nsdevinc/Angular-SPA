@@ -1,0 +1,15 @@
+@import '../../../styles/abstracts/variables';
+
+.nav-bar-class {
+    height: 30px;
+    width: 100%;
+    padding: 2px;
+    display: flex;
+    justify-content: center;
+    background-color: $dark-slate-grey;
+    color: white;
+    font-weight: bold;
+    //border: 1px;
+    //border-style: solid;
+    //border-color: black;
+}
