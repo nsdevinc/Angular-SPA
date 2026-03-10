@@ -1,0 +1,36 @@
+@import '../../../styles/abstracts/variables';
+
+.alert-bar-class {
+    height: 30px;
+    width: 100%;
+    padding: 2px;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    color: white;
+    font-weight: bold;
+    //border: 1px;
+    //border-style: solid;
+    //border-color: black;
+}
+
+.alert-left {
+    display:flex;    
+    align-items: center;
+    //justify-content: flex-start;
+    flex: 1;
+}
+
+.alert-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+ .alert-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 4px;
+    flex: 1;
+ }

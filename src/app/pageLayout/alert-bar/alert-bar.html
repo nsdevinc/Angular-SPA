@@ -1,0 +1,17 @@
+<div id="divAlertBar" class="alert-bar-class" [style.backgroundColor]="alertColor">
+    <div id="divAlertBarLeft" class="alert-left">
+        <mat-icon  >error</mat-icon>
+        <mat-icon>warning</mat-icon>
+        <mat-icon>check</mat-icon>
+    </div>
+    <div id="divAlerBarCenter" class="alert-center">
+        {{alertMessage}}
+    </div>
+    <div id="divAlertBarRight" class="alert-right">
+        
+        <mat-icon style="color: black;" (click)="changeColor('success')" >check</mat-icon>
+        
+        <mat-icon style="color: black;" (click)="changeColor('error')" >alarm</mat-icon>
+        <mat-icon (click)="changeColor('clear')" >close</mat-icon>
+    </div>
+</div>
