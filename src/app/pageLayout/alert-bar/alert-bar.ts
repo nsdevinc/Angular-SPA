@@ -10,6 +10,9 @@ import { MatIconModule } from '@angular/material/icon';
   imports: [AsyncPipe, MatIconModule],
   templateUrl: './alert-bar.html',
   styleUrl: './alert-bar.scss',
+  animations:[
+    
+  ]
 })
 export class AlertBar implements OnInit{
 
@@ -19,6 +22,7 @@ export class AlertBar implements OnInit{
   //successColor:string = "#50C878"
 
 
+  isOk:boolean = true;
   alertColorSub!: Subscription;
   alertColor:string = ''
   alertStatusSub!: Subscription;
@@ -56,7 +60,7 @@ export class AlertBar implements OnInit{
   changeColor(alertColor:string):void{
     switch (alertColor){
       case 'error':
-        this.alertService.setError('Test error');
+        this.alertService.setError('Test error');        
         break;
       case 'warning':
         //this.alertColor = this.warningColor;
@@ -65,10 +69,10 @@ export class AlertBar implements OnInit{
         //this.alertColor = this.informationColor;
         break;
       case 'success':
-        //this.alertColor = this.successColor;
+        this.alertService.setSuccess('Test success');  
         break;
       case 'clear':
-        this.alertService.clearAlert();
+        this.alertService.clearAlert();        
         break;
     }
     console.log('alertBar:end changeColor function')

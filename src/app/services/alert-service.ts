@@ -36,4 +36,11 @@ export class AlertService {
     this._alertColor.next(this.errorColor)
     this._alertMessage.next(message);
   }
+
+  setSuccess(message:string){
+    console.log('alertService:setSuccess called - '+message);
+    this._alertStatus.next('success');
+    this._alertColor.next(this.successColor)
+    this._alertMessage.next(message);
+  }
 }

@@ -1,1 +1,13 @@
-<p>home-component works!</p>
+<div id="divHomePageContent" class="home-content-class">
+    <div id="divSpinner" class="spinner-class" *ngIf='showSpinner' (click)="hideSpinner()">
+        <app-spinner [msg]="'Processing data...'"></app-spinner>
+    </div>
+    <div id="divHomePage">
+        Home page
+        <br>
+    <button style="height: 30px;width: 100px;" (click)="testSpinner()">Test spinner</button>
+    </div>
+    
+
+
+</div>

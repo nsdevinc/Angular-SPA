@@ -6,12 +6,18 @@
     padding: 2px;
     display: flex;
     justify-content: center;
-    background-color: white;
-    color: white;
+    background-color: #FFFFFF; /* Starting color */
+    transition: background-color 1s ease-in-out; /* Animates the background-color change over 1 second */
+    color: white;    
     font-weight: bold;
     //border: 1px;
     //border-style: solid;
     //border-color: black;
+}
+
+.isOk{
+    background-color: #FFFFFF; /* Starting color */
+    transition: background-color 1s ease-in-out; /* Animates the background-color change over 1 second */
 }
 
 .alert-left {

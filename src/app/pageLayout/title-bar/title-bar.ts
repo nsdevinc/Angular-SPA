@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-title-bar',
@@ -6,4 +7,13 @@ import { Component } from '@angular/core';
   templateUrl: './title-bar.html',
   styleUrl: './title-bar.scss',
 })
-export class TitleBar {}
+export class TitleBar implements OnInit{
+
+  appTitle: string = 'Not set'
+  private titleService = inject(Title);
+
+  ngOnInit(): void {
+    this.appTitle = this.titleService.getTitle();
+  }
+
+}

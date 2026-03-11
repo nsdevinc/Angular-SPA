@@ -1,0 +1,25 @@
+.home-content-class{
+    position: relative;
+    min-height: 200px;
+    height: 650px;
+    width: 100%;
+    padding: 2px;
+    padding-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: white;
+}
+
+.spinner-class {
+   position: absolute; /* Positions the spinner relative to the parent-div */
+  top: 0; /* Moves the top edge to the vertical midpoint */
+  left: 0; /* Moves the left edge to the horizontal midpoint */
+  width: 100%;
+  height: 100%;
+  //transform: translate(-50%, -50%); /* Shifts the element back by half its own width and height, effectively centering its center point */
+  /* Ensures the overlay covers the whole parent div if needed (width: 100%; height: 100%;) */
+background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background color */
+  backdrop-filter: blur(5px); /* The main blur effect */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+}
