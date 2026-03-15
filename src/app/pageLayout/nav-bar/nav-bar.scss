@@ -13,3 +13,73 @@
     //border-style: solid;
     //border-color: black;
 }
+
+.nav-bar-container-class{
+    position: relative;
+    height: 15px;
+    width: 100%;
+    padding: 2px;
+    background-color: $dark-slate-grey;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-bar-container-class:hover+.nav-bar-items-wrapper-class{
+     /* Final state: set to a large enough value to accommodate all content */
+  max-height: 500px; /* Adjust as needed, must be a fixed value */
+}
+
+.nav-bar-items-wrapper-class{   
+    /* Initial state: min-height is 0, so content is hidden */
+
+  max-height: 0;
+  overflow: hidden;
+  /* Smooth transition effect */
+  transition: max-height 1.2s ease-in-out;
+  background-color: $dark-slate-grey;
+    color: white;
+  padding: 0 10px; /* Optional: adds some internal spacing */
+  //z-index: 2;
+}
+
+.nav-bar-items-class {
+    width: 100%;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;    
+}
+.nav-bar-items-wrapper-class:hover {
+    max-height: 500px; /* Adjust as needed, must be a fixed value */
+}
+
+.rounded-outline-btn {
+  /* Button Shape and Spacing */
+  padding: 10px 20px; /* Adjust padding as needed */
+  font-size: 16px;
+  margin:5px;
+  cursor: pointer;
+
+  /* Outline Styling (Border) */
+  border: 2px solid #dad7cdff; /* Color of the outline */
+  color: #dad7cdff; /* Text color matching the outline */
+  background-color: transparent; /* Transparent background to make it an outline button */
+
+  /* Rounded Corners */
+  border-radius: 5px; /* Adjust value for desired roundness; use 50% for a pill shape */
+  
+  /* Smooth transition for hover effects */
+  transition: all 0.3s ease;
+}
+
+/* Hover Effect (Optional) */
+.rounded-outline-btn:hover {
+  background-color: #84a98cff; /* Fills the background on hover */
+  color: white; /* Changes text color for better contrast */
+}
+
+
