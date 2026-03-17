@@ -18,8 +18,8 @@ export class NavBar {
   constructor(private navBarService:NavBarService){
     this.currentPageSub = this.navBarService.getCurrentPage.subscribe({
       next:(curPage)=>{
-        console.log('nav-bar constructor - curPage: '+curPage.toString());
-        console.log('nav-bar constructor - curPage length: '+curPage.length)
+        //console.log('nav-bar constructor - curPage: '+curPage.toString());
+        //console.log('nav-bar constructor - curPage length: '+curPage.length)
         if (curPage.length == 1){
           this.currentPage = curPage[0];
           return;
@@ -27,15 +27,15 @@ export class NavBar {
           let tempPage = curPage[0];
           let tempStr = '';
           for(let i=1;i<=curPage.length-1;i++){
-            console.log('nav-bar constructor: '+curPage[i]);
+            //console.log('nav-bar constructor: '+curPage[i]);
             tempStr = tempStr + " -> "+curPage[i]
           }
-          console.log('nab-bar constructor: '+tempStr);
+          //console.log('nab-bar constructor: '+tempStr);
           tempPage = tempPage+tempStr;
           this.currentPage = tempPage;
           return;
         }
-        this.currentPage = "Error in nav bar current page"
+        //this.currentPage = "Error in nav bar current page"
       }
     });
   }

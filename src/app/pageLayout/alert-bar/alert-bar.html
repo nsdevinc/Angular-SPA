@@ -1,8 +1,9 @@
 <div id="divAlertBar" class="alert-bar-class" [style.backgroundColor]="alertColor">
     <div id="divAlertBarLeft" class="alert-left">
-        <mat-icon  >error</mat-icon>
-        <mat-icon>warning</mat-icon>
-        <mat-icon>check</mat-icon>
+        <mat-icon *ngIf="alertStatus == 'error'" >error</mat-icon>
+        <mat-icon *ngIf="alertStatus == 'warning'">warning</mat-icon>
+        <mat-icon *ngIf="alertStatus == 'information'">information</mat-icon>
+        <mat-icon *ngIf="alertStatus == 'success'">check</mat-icon>
     </div>
     <div id="divAlerBarCenter" class="alert-center">
         {{alertMessage}}
@@ -10,7 +11,8 @@
     <div id="divAlertBarRight" class="alert-right">
         
         <mat-icon style="color: black;" (click)="changeColor('success')" >check</mat-icon>
-        
+        <mat-icon style="color: black;" (click)="changeColor('warning')" >warning</mat-icon>
+        <mat-icon style="color: black;" (click)="changeColor('information')" >information</mat-icon>
         <mat-icon style="color: black;" (click)="changeColor('error')" >alarm</mat-icon>
         <mat-icon (click)="changeColor('clear')" >close</mat-icon>
     </div>

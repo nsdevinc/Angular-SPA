@@ -14,7 +14,7 @@ export class HomeComponent {
   showSpinner:boolean = false;
 
   constructor(private navService:NavBarService){
-    this.navService.setCurrentPage(['Home','Subpage 1','sub page 3']);
+    this.navService.setCurrentPage(['Home']);
   }
 
   testSpinner(){

@@ -8,9 +8,9 @@ import { BehaviorSubject, Observable } from 'rxjs';
 export class AlertService {
 
   errorColor:string = "#DC143C"
-  warningColor:string = "#FFD700"
-  informationColor:string = "#0096FF"
-  successColor:string = "#50C878"
+  warningColor:string = "#E1C16E"
+  informationColor:string = "#6082B6"
+  successColor:string = "#097969"
   okColor:string = "#FFFFFF"
 
   private _alertStatus = new BehaviorSubject<string>('Ok');
@@ -24,23 +24,52 @@ export class AlertService {
 
   constructor () {}
 
-  clearAlert(){
+  clearAlert():void{
+    console.log('alert-service: clearAlert called.');
     this._alertMessage.next('');
     this._alertColor.next(this.okColor);
-    this._alertStatus.next('Ok')
+    this._alertStatus.next('Ok');
+    console.log('alert-service: clearAlert end.');
   }
 
-  setError(message:string){
+  setError(message:string,autoClear:boolean){
     console.log('alertService:setError called - '+message);
     this._alertStatus.next('error');
     this._alertColor.next(this.errorColor)
     this._alertMessage.next(message);
+    if (autoClear){
+      setTimeout(()=>this.clearAlert(),300)
+    }
   }
 
-  setSuccess(message:string){
+  setWarning(message:string,autoClear:boolean){
+    console.log('alertService:setWarning called - '+message);
+    this._alertStatus.next('warning');
+    this._alertColor.next(this.warningColor)
+    this._alertMessage.next(message);
+    if (autoClear){
+      setTimeout(()=>this.clearAlert(),300)
+    }
+  }
+
+  setInformation(message:string,autoClear:boolean){
+    console.log('alertService:setInformation called - '+message);
+    this._alertStatus.next('information');
+    this._alertColor.next(this.informationColor)
+    this._alertMessage.next(message);
+    if (autoClear){
+      setTimeout(()=>this.clearAlert(),3000)
+    }
+  }
+
+
+  setSuccess(message:string,autoClear:boolean){
     console.log('alertService:setSuccess called - '+message);
     this._alertStatus.next('success');
     this._alertColor.next(this.successColor)
-    this._alertMessage.next(message);
+    this._alertMessage.next(message);    
+    if (autoClear){
+      setTimeout(()=>this.clearAlert(),300)
+    }    
   }
 }
